@@ -24,7 +24,7 @@ public class SortsTest {
         assertThrows(IllegalArgumentException.class, () -> Sorts.isSorted(null, new Integer[]{}));
     }
 
-    @ParameterizedTest()
+    @ParameterizedTest
     @MethodSource("getIsSortedArgs")
     public void testIsSorted(Integer[] array, boolean expected) {
         assertEquals(expected, Sorts.isSorted(array));
