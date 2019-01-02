@@ -25,12 +25,12 @@ public class SortsTest {
     }
 
     @ParameterizedTest()
-    @MethodSource("getSortsArguments")
+    @MethodSource("getIsSortedArgs")
     public void testIsSorted(Integer[] array, boolean expected) {
         assertEquals(expected, Sorts.isSorted(array));
     }
 
-    private static Stream<Arguments> getSortsArguments() {
+    private static Stream<Arguments> getIsSortedArgs() {
         return Stream.of(
                 Arguments.of(new Integer[]{}, true),
                 Arguments.of(new Integer[]{1, 2, 3}, true),
