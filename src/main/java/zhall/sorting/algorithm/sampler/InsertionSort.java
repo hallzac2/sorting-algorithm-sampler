@@ -23,6 +23,7 @@ public class InsertionSort {
         for (int index = 1; index < array.length; index++) {
             int position = index;
             T temp = array[position];
+            
             while (position > 0 && comparator.compare(array[position - 1], temp) == 1) {
                 array[position] = array[position - 1];
                 position--;
