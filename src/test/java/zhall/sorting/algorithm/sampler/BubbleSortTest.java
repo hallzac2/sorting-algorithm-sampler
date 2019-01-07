@@ -22,7 +22,7 @@ public class BubbleSortTest {
     public void testSort_with_null_comparator() {
         assertThrows(IllegalArgumentException.class, () -> BubbleSort.sort(null, new Integer[]{}));
     }
-    
+
     @ParameterizedTest
     @ArgumentsSource(SortTestArguments.class)
     public void testSort(Integer[] array) {
